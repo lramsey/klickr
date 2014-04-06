@@ -6,7 +6,8 @@ var klicksSchema = new mongoose.Schema({
     x: Number,
     y: Number,
     t: Date
-  }]
+  }],
+  url: String
 });
 
 // keystrokeSchema.methods.initialize = function () {
