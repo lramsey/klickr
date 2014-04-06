@@ -1,6 +1,16 @@
-'use strict';
+angular.module('Klickr', ['ngRoute'])
 
-angular.module('klickrApp', [
-  'ngCookies',
-  'ngSanitize'
-]);
+.config(function ($routeProvider, $locationProvider) {
+
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/landing.html'
+    })
+    .when('/gallery', {
+      templateUrl: 'views/gallery.html',
+      controller: 'HomeCtrl'
+    })
+    .otherwise({
+      // redirectTo: '/'
+    });
+});

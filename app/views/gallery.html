@@ -1,0 +1,8 @@
+<div class="container content-box">
+  <h1 class="centered">Gallery</h1>
+  <ul ng-controller='HomeCtrl'>
+  <div class="klick" ng-repeat='link in links'>
+    <a href='{{ link.linkUrl }}'> {{ link.url }} </a>
+  </div>
+</ul>
+</div>
