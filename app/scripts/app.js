@@ -1,6 +1,8 @@
-angular.module('Klickr', ['ngRoute'])
+'use strict';
 
-.config(function ($routeProvider, $locationProvider) {
+angular.module('klickrApp', ['ngRoute'])
+
+.config(function ($routeProvider) {
 
   $routeProvider
     .when('/', {
@@ -8,9 +10,14 @@ angular.module('Klickr', ['ngRoute'])
     })
     .when('/gallery', {
       templateUrl: 'views/gallery.html',
-      controller: 'HomeCtrl'
+      controller: 'GalleryCtrl'
     })
     .otherwise({
       // redirectTo: '/'
     });
+})
+
+/* Defines defaults for App */
+.constant('DEFAULTS', {
+  HOST: 'http://jy1.cloudapp.net:3000'
 });
